@@ -6,11 +6,10 @@ print("--- MODO COPIAR E COLAR (AMV) ---")
 print("1. Cole TODA a sua lista abaixo (pode ter várias linhas).")
 print("2. Quando terminar de colar, aperte ENTER, depois CTRL+Z (no Windows) e ENTER de novo para processar.\n")
 
-# Isso aqui permite que você cole textos gigantes com quebras de linha
 import sys
 entrada_usuario = sys.stdin.read() 
 
-# O restante do código de busca (RegEx) continua igual
+
 placas_extraidas = re.findall(r'[A-Z0-9]{7}', entrada_usuario.upper().replace("-", "").replace(" ", ""))
 
 if placas_extraidas:
